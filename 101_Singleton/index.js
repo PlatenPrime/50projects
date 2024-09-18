@@ -24,7 +24,7 @@ let instance
 // ES6
 
 class Counter {
-    constructor () {
+    constructor() {
         if (typeof Counter.instance === "object") {
             return Counter.instance;
         }
@@ -35,14 +35,14 @@ class Counter {
 
 
 
-getCounter() {
-    return this.count;
-}
+    getCounter() {
+        return this.count;
+    }
 
 
-increaseCounter() {
-  return  this.count++
-}
+    increaseCounter() {
+        return this.count++
+    }
 
 }
 
@@ -68,3 +68,25 @@ console.log(myCount2.getCounter());
 
 
 
+// Oblect Assign
+
+const obj1 = {
+    name: 'obj1',
+    age: 20
+}
+
+const obj2 = {
+    link: 'https://google.com',
+    value: 'google'
+}
+
+console.log(obj1);
+
+console.log("link" in obj1);
+
+
+Object.assign(obj1, obj2);
+
+console.log("link" in obj1);
+
+console.log(obj1);
