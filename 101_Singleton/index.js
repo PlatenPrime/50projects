@@ -25,11 +25,16 @@ let instance
 
 class Counter {
     constructor() {
-        if (typeof Counter.instance === "object") {
-            return Counter.instance;
+
+
+// Происходит всегда, когда объект уже был создан первый раз
+        if (typeof Counter.single === "object") {
+            return Counter.single;
         }
+
+// Происходит только  первый раз 
         this.count = 0;
-        Counter.instance = this;
+        Counter.single = this;
         return this;
     }
 
